@@ -1,0 +1,37 @@
+Nome Claudio
+mail Cap
+pwd La prima Altran
+
+*************************************************************************
+Dear Customer!
+
+
+Thank you for subscribing to Free OpenWeatherMap!
+
+API key:
+- Your API key is 0173ffc280d6318b9c54584aa6a97a2f
+- Within the next couple of hours, it will be activated and ready to use
+- You can later create more API keys on your account page
+- Please, always use your API key in each API call
+
+Endpoint:
+- Please, use the endpoint api.openweathermap.org for your API calls
+- Example of API call:
+api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=0173ffc280d6318b9c54584aa6a97a2f
+
+Useful links:
+- API documentation https://openweathermap.org/api
+- Details of your plan https://openweathermap.org/price
+- Please, note that 16-days daily forecast and History API are not available for Free subscribers
+
+
+Blog
+Support center & FAQ
+Contact us info@openweathermap.org.
+
+
+My New Api KEY Claudio
+104d76c13f3a9fbe55f8bf18ec002a29
+
+Example of API call:
+api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=104d76c13f3a9fbe55f8bf18ec002a29
