@@ -21,12 +21,12 @@ await funziona solo nelle funzioni async  e attende fino a quando la promise
 risolve e ritorna risultato
 */
   Future<Weather> getWeather(String location) async {
-    developer.log('Parametro $location', name: 'getWeather');
+    // developer.log('Parametro $location', name: 'getWeather');
     Map<String, dynamic> parameters = {'q': location, 'appId': apiKey};
     Uri uri = Uri.https(authority, path, parameters);
     http.Response result = await http.get(uri);
     Map<String, dynamic> data = json.decode(result.body);
-    developer.log(result.body, name: 'Data response');
+    // developer.log(result.body, name: 'Data response');
     Weather weather = Weather.fromJson(data);
     return weather;
   }
