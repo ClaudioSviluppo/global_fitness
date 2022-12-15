@@ -21,7 +21,7 @@ class Weather {
          devo sottrarre 273.15
         */
     temperature = (weatherMap['main']['temp'] * (9 / 5) - 459.67) ?? 0;
-    perceived = (weatherMap['main']['feel_like'] * (9 / 5) - 459.67) ?? 0;
+    perceived = (weatherMap['main']['feels_like'] * (9 / 5) - 459.67) ?? 0;
     pressure = weatherMap['main']['perceived'] ?? 0;
     humidity = weatherMap['main']['humidity'] ?? 0;
     description = weatherMap['weather'][0]['main'] ?? '';

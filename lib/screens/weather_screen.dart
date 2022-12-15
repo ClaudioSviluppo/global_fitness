@@ -1,8 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import '../data/http_helper.dart';
 import 'dart:developer' as developer;
+
+import '../data/weather.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-  String result = '';
+  Weather result = Weather('', '', 0, 0, 0, 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,14 +23,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
               onPressed: getData,
               child: const Text('Get Data'),
             ),
-            Text(result),
+            Text(result.name),
           ],
         ));
   }
 
   Future getData() async {
-    print('****************************');
-    developer.log('getData', name: 'QQQQQQ');
+    // print('****************************');
+    developer.log('getData()', name: '_WeatherScreenState');
     HttpHelper helper = HttpHelper();
     result = await helper.getWeather('London');
     setState(() {});
