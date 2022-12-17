@@ -17,10 +17,26 @@ class SPHelper {
     List<Session> sessions = [];
     Set<String> keys = prefs.getKeys();
     keys.forEach((String key) {
-      Session session =
-          Session.fromJson(json.decode(prefs.getString(key) ?? ''));
-      sessions.add(session);
+      if (key != 'counter') {
+        Session session =
+            Session.fromJson(json.decode(prefs.getString(key) ?? ''));
+        sessions.add(session);
+      }
     });
     return sessions;
+  }
+
+  Future setCounter() async {
+    int counter = prefs.getInt('counter') ?? 0;
+    counter++;
+    await prefs.setInt('counter', counter);
+  }
+
+  int getCounter() {
+    return prefs.getInt('counter') ?? 0;
+  }
+
+  Future deleteSession(int id) async {
+    prefs.remove(id.toString());
   }
 }
